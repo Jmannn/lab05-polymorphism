@@ -115,7 +115,7 @@ class Parser<T: StringConvertibleNum> {
             // multiplication by positive or negative 1
             if firstParseChar && (exprChar=="+" || exprChar=="-") {
                 if exprChar == "-" {
-                    tokens += [(op: " ", token: String(exprChar) + "1")]
+                    tokens.append((op: " ", token: String(exprChar) + "1"))
                     newOperation = "*"
                 }
                 firstParseChar = false;
