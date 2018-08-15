@@ -1203,7 +1203,7 @@ for index in 0..&lt;array.count {
 <span class="swiftcode">            <span class="swiftcomment">// multiplication by positive or negative 1</span></span>
 <span class="swiftcode">            <span class="swiftkeyword">if</span> firstParseChar && (exprChar==<span class="swiftstring">"+"</span> || exprChar==<span class="swiftstring">"-"</span>) {</span>
 <span class="swiftcode">                <span class="swiftkeyword">if</span> exprChar == <span class="swiftstring">"-"</span> {</span>
-<span class="swiftcode">                    tokens += [(op: <span class="swiftstring">" "</span>, token: <span class="swiftclass">String</span>(exprChar) + <span class="swiftstring">"1"</span>)]</span>
+<span class="swiftcode">                    tokens.append((op: <span class="swiftstring">" "</span>, token: <span class="swiftclass">String</span>(exprChar) + <span class="swiftstring">"1"</span>))</span>
 <span class="swiftcode">                    newOperation = <span class="swiftstring">"*"</span></span>
 <span class="swiftcode">                }</span>
 <span class="swiftcode">                firstParseChar = <span class="swiftkeyword">false</span>;</span>
